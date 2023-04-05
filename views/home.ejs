@@ -1,0 +1,13 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p><%= Content %></p>
+
+<% postsList.forEach((element) => { %>
+  <h3>&emsp;<%= element.postTitle %></h3>
+  <div class="elementContent">
+    <p><%= element.postContent.substring(0,100) + "..." %><a href="/posts/<%= element.postTitle %>">Read more</a></p>
+  </div>
+<% }); %>
+
+<%- include("partials/footer") -%>
